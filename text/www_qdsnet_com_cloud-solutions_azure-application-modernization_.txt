@@ -1,0 +1,1131 @@
+
+
+
+
+
+
+
+
+
+Azure Application Modernization - Qatar Datamation Systems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		Skip to content
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+Our Story
+News
+Partner & Certifications
+
+
+Services & Solutions
+
+Enterprise Computing
+Network & Security
+Business Applications
+Enterprise Solutions
+Managed IT Services
+
+
+Resources
+
+Blog
+
+
+Cloud Solutions
+
+Azure Application Modernization
+Cloud Adoption and Transformation
+Windows Virtual Desktop
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+About Us
+
+Our Story
+News
+Partner & Certifications
+
+
+Services & Solutions
+
+Enterprise Computing
+Network & Security
+Business Applications
+Enterprise Solutions
+Managed IT Services
+
+
+Resources
+
+Blog
+
+
+Cloud Solutions
+
+Azure Application Modernization
+Cloud Adoption and Transformation
+Windows Virtual Desktop
+
+
+ 
+
+ Menu
+
+
+About Us
+
+Our Story
+News
+Partner & Certifications
+
+
+Services & Solutions
+
+Enterprise Computing
+Network & Security
+Business Applications
+Enterprise Solutions
+Managed IT Services
+
+
+Resources
+
+Blog
+
+
+Cloud Solutions
+
+Azure Application Modernization
+Cloud Adoption and Transformation
+Windows Virtual Desktop
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+Azure Application Modernization 
+
+
+
+							A fully managed cost-effective platform for building, deploying and scaling your Web Applications						
+
+
+
+
+
+
+
+
+
+
+
+Enabling productivity and Innovation
+ 
+
+
+
+							Most of the enterprises considering moving their existing apps to Azure cloud to leverage modern infrastructure, but they are unsure of what it takes to plan, migrate, manage, and scale. Qatar Datamation Systems certified team specialize in migration, building, deploy and scale web apps and APIs as per the customer requirements.
+
+We have been with the web applications migration and creation on microservices architecture across technology stacks like Java, NodeJS, and MS Dot Net. Azure App Services Meet rigorous, enterprise-grade performance, security and compliance requirements used a trusted, fully managed platform that handles over 40 billion requests per day.						
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Features Provided by QDS 
+
+
+
+
+
+
+ 
+Fully managed platform with built-in infrastructure maintenance, security patching and scaling
+
+
+
+ 
+Built-in CI/CD integration and zero-downtime deployments
+
+
+
+ 
+Integration with virtual networks and ability to run in an isolated and dedicated App Service environment
+
+
+
+ 
+Rigorous security and compliance, including SOC and PCI, for seamless deployments across public cloud, Azure Government and on-premises environments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The benefits of modernizing legacy IT systems 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Innovation					
+
+
+						Azure’s key focus is business innovation with fully managed services like Azure SQL Database, Azure App Services, Azure API Management, etc.
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Cost-optimization					
+
+
+						Azure’s consumption-based pricing model helps to reduce on-premise infrastructure costs, especially the infrastructure acquired for peak loads.					
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Scalability and Security					
+
+
+						Azure provides a wide-ranging collection of configurable security options and the ability to control them so that the security can be customized to meet the requirements of your organization’s operations.
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Migrate .NET web apps with ease 
+
+
+
+Qatar Datamation Systems performs the readiness check and bring your web apps to the cloud with minimal or no code changes by using the proven experience we specialize in deploying DevOps CI/CD pipeline for deployment and testing.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Build your next app faster on a fully managed SQL database 
+
+
+
+Qatar Datamation Systems is specialized in migration of existing On-Prem SQL databases to Azure SQL Database or Azure Managed Instance (PaaS).As a Part of the Azure SQL family, Azure SQL is an intelligent, scalable, relational database service built for the cloud. Optimise performance and durability with automated, AI-powered features that are always up to date. With serverless compute and Hyperscale storage options that automatically scale resources on demand, you’re free to focus on building new applications without worrying about storage size or resource management. 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Non-Microsoft Platforms 
+
+
+
+Qatar Datamation Systems specialized in migration of Non-Microsoft platforms applications such as PHP, Java, Node.js, WordPress to Azure App services, MySQL databases to Azure Database for MySQL. We provide solutions, which are quite easy to manage and scale. It automates the management and maintenance of your infrastructure and database server, including routine updates, backups and security. Enjoy maximum control of database management with custom maintenance windows and multiple configuration parameters.Build with the latest edition of MySQL. Use your existing tools, such as MySQL Workbench, programming languages and drivers of your choice, including PHP, Java, Node.js etc. 
+
+
+
+
+
+
+
+
+
+
+
+Success Stories 
+
+
+
+
+
+
+
+ Al Rayyan 
+
+
+
+
+
+
+
+
+							Industry: Media and Paper						
+
+
+ 
+
+
+
+							Employees: 500+						
+
+
+ 
+
+
+
+							Location: Qatar						
+
+
+ 
+
+
+
+							Azure Assessment						
+
+
+
+Interviews
+Azure Migrate
+Infrastructure Workload Dependency Mapping
+Submission of Azure Migration Summary
+ 
+
+ 
+
+
+
+							Planning						
+
+
+
+Azure Infrastructure Design Discussion
+Cloud Security Discussion
+Application migration strategy
+Design Documents
+ 
+
+ 
+
+
+
+							Azure Infrastructure Readiness based on MOTC Approved design						
+
+
+ 
+
+
+
+							Azure Infrastructure Build using Terraforms.						
+
+
+ 
+
+
+
+							Implement NVAs from different ISVs as cloud security best practices.						
+
+
+ 
+
+
+
+							Configuration of Azure App Service Environment (ASE) for App Service deployment						
+
+
+ 
+
+
+
+							Re-Factor and Redesigning for Open-Source public Websites (PHP, WordPress) from External hosting Provider to Web Apps (PaaS)						
+
+
+ 
+
+
+
+							Re-Factor the MySQL Servers to Azure Database for MySQL Instances (PaaS)						
+
+
+
+
+
+
+
+
+
+
+
+
+ Ministry of Culture and Sports 
+
+
+
+
+
+
+
+
+							Industry: Government						
+
+
+ 
+
+
+
+							Employees: 1200+						
+
+
+ 
+
+
+
+							Location: Qatar						
+
+
+ 
+
+
+
+							Azure Assessment						
+
+
+
+Interviews
+Azure Migrate
+Infrastructure Workload Dependency Mapping
+Submission of Azure Migration Summary
+ 
+
+ 
+
+
+
+							Planning						
+
+
+
+Azure Infrastructure Design Discussion
+Cloud Security Discussion
+Design Documents
+ 
+
+ 
+
+
+
+							Azure Infrastructure Readiness based on MOTC Approved design						
+
+
+ 
+
+
+
+							Azure Infrastructure Build using Terraforms						
+
+
+ 
+
+
+
+							Implement NVAs from different ISVs as cloud security best practices						
+
+
+ 
+
+
+
+							Lift and Shift of Virtual Machines (IaaS)						
+
+
+ 
+
+
+
+							Configuration of Azure App Service Environment (ASE) for App Service deployment						
+
+
+ 
+
+
+
+							Isolated Environments and Virtual VNet configuration for Azure Web Apps						
+
+
+ 
+
+
+
+							Re-Factor for multiple public facing Websites as well as multiple internal applications from Windows Servers to Web Apps (PaaS)						
+
+
+ 
+
+
+
+							Re-Factor the SQL Servers to SQL Managed Instances (PaaS)						
+
+
+
+
+
+
+
+
+
+
+
+
+ Al Kass TV Channel 
+
+
+
+
+
+
+
+
+							Industry: Media						
+
+
+ 
+
+
+
+							Employees: 1500+						
+
+
+ 
+
+
+
+							Location: Qatar						
+
+
+ 
+
+
+
+							Azure Ready Assessment						
+
+
+
+Interviews
+Azure Migrate
+Infrastructure Workload Dependency Mapping
+Submission of Azure Migration Summary
+ 
+
+ 
+
+
+
+							Planning						
+
+
+
+Azure Infrastructure Design Discussion
+Cloud Security Discussion
+Design Documents
+ 
+
+ 
+
+
+
+							Azure Infrastructure Readiness based on MOTC Approved design						
+
+
+ 
+
+
+
+							Azure Infrastructure Build						
+
+
+ 
+
+
+
+							Implement NVAs as cloud security best practices						
+
+
+ 
+
+
+
+							Lift and Shift of Virtual Machines (IaaS)						
+
+
+ 
+
+
+
+							Configuration of Azure App Service Environment (ASE) for App Service deployment						
+
+
+ 
+
+
+
+							Re-Factor and Redesigning for Open-Source public Websites (PHP) from External hosting Provider to Web Apps (PaaS)						
+
+
+ 
+
+
+
+							Re-Factor the MySQL Servers to Azure Database for MySQL Instances (PaaS)						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+Leave the IT to us and focus on your business 
+
+
+
+							We remove the headaches from IT so you can focus on what matters most. QDS is one of the leading System Integrators in Qatar to help businesses grow with confidence						
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Company Information 
+
+
+
+Al Darwish United Tower, Al Sadd Street 
+Al Sadd, Doha 13856
+Qatar 
+
+
+
+
+
+
+ 
+Phone: 974 44439900
+
+
+
+ 
+Fax:  974 44432154
+
+
+
+
+
+
+
+
+
+Facebook-f
+ 
+
+
+
+Linkedin-in
+ 
+
+
+
+Twitter
+ 
+
+
+
+
+
+
+
+
+
+
+Sitemap 
+
+
+
+
+
+
+About Us
+
+
+
+
+Services & Solutions
+
+
+
+
+Resources
+
+
+
+
+Blog
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© 2024 Qatar Datamation Systems. All Rights Reserved. 
+
+
+
+
+
+
+
+
+
+
+Privacy Policy
+
+
+
+
+Website by Pronto
+
+
+
+
+
+
+
+
+
+
+
+
+
+Scroll to Top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

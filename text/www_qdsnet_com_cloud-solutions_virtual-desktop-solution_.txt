@@ -1,0 +1,1465 @@
+
+
+
+
+
+
+
+
+
+Windows Virtual Desktop - Qatar Datamation Systems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		Skip to content
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+Our Story
+News
+Partner & Certifications
+
+
+Services & Solutions
+
+Enterprise Computing
+Network & Security
+Business Applications
+Enterprise Solutions
+Managed IT Services
+
+
+Resources
+
+Blog
+
+
+Cloud Solutions
+
+Azure Application Modernization
+Cloud Adoption and Transformation
+Windows Virtual Desktop
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+About Us
+
+Our Story
+News
+Partner & Certifications
+
+
+Services & Solutions
+
+Enterprise Computing
+Network & Security
+Business Applications
+Enterprise Solutions
+Managed IT Services
+
+
+Resources
+
+Blog
+
+
+Cloud Solutions
+
+Azure Application Modernization
+Cloud Adoption and Transformation
+Windows Virtual Desktop
+
+
+ 
+
+ Menu
+
+
+About Us
+
+Our Story
+News
+Partner & Certifications
+
+
+Services & Solutions
+
+Enterprise Computing
+Network & Security
+Business Applications
+Enterprise Solutions
+Managed IT Services
+
+
+Resources
+
+Blog
+
+
+Cloud Solutions
+
+Azure Application Modernization
+Cloud Adoption and Transformation
+Windows Virtual Desktop
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+Windows Virtual Desktop Migration for Azure 
+
+
+
+							Take your desktop to the cloud for remote work and unparalleled productivity						
+
+
+
+
+
+
+
+
+
+
+
+Desktop Virtualization
+ 
+
+
+
+							The Next Leap Forward in Enterprise Productivity						
+
+
+
+Virtual Desktop platforms are transforming how teams work from anywhere in the world– an necessity in a post-pandemic world. Desktop virtualization is also a critical tool for maintaining business continuity. If disaster strikes, organizations can rest assure that their data remains secure and accessible at the cloud, allowing business operations to resume immediately.Enter Windows Virtual Desktop (WVD). WVD is a cloud-based application and desktop virtualization tool powered by Azure. Its baked-in security and compliance features, integration with the Microsoft suite of products enterprises have relied on for decades, and cost effectiveness makes it the best virtual desktop solution available. 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Desktop Virtualization Process 
+
+
+
+							We understand that every organization has different goals for their WVD investment. Our team of Azure experts and cloud consultants provide a cost optimization, security, and remote productivity strategy tailored to your specific needs. The path to desktop virtualization includes four key phases						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						ASSESS					
+
+
+						Create a desktop virtualization plan informed by your application needs, current licenses, and infrastructure and TCO goals
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						DEPLOY					
+
+
+						Set up a scalable & flexible virtualized environment tailored to your team’s productivity goals and remote work requirements.
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						ONBOARD					
+
+
+						Train employees on WVD best practices so that they can get the most out of their desktop virtualization investment.
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						SECURE & MANAGE					
+
+
+						Leverage advanced adaptive threat protection tools to keep your virtualized infrastructure’s data secure and stable.
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Make the journey from ON-PREM VDI TO WVD
+ 
+
+
+
+							Virtual desktop infrastructure (VDI) is a key cog in the business continuity machinery, as it helps securely deliver desktops and applications to flexible workforces, regardless of their locations. By transitioning from on-premises VDI to Windows Virtual Desktop (WVD) in Azure, you can realize better ROI from your deployment while making your business continuity efforts more cost-effective, reliable, and futureproof.
+
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Simplified Productivity 
+
+
+
+Given that employees are 20-25% more productive when working from home (WFH), and 76% of them prefer working remotely, virtual desktops will be critical for companies looking to get the most out of their workforce.WVD provides a level of freedom and workplace efficiency that would have otherwise been impossible, enabling companies to fully embrace post-2020 world of remote working. Windows Virtual Desktop integrates with Microsoft Teams and Microsoft 365 Apps for Enterprise, ensuring a seamless experience from any device, any location.When you work with a Partner like QDS, the productivity gains experienced through your WVD solution are amplified even further. We ensure your desktops are linked correctly, your applications provide a seamless experience, and your users are onboarded successfully. 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Cut Licensing and Infrastructure Costs 
+
+
+
+WVD is a free service for anyone with an existing Windows user or Microsoft 365 license. The only additional costs are cloud consumption, for which you only pay for what you use.Windows Virtual Desktop also enables companies to maximize their current infrastructure and investments with VMware Horizon Cloud and Citrix Virtual Apps and Desktop Service on Microsoft Azure. WVD integrates into both of these existing applications and desktop virtualization environments for those looking to maintain a hybrid cloud deployment. In addition, VMware and Citrix customers can deploy Windows 10 Enterprise multi-session on Azure VMs, enabling multiple concurrent usersAt QDS, we have every trick and tactic at our disposal for optimizing your WVD and Azure costs. From Azure Hybrid Cloud Benefits and price matching to reserved instances and containerization, our team of Azure Cloud experts will ensure you get as much value as possible from your Windows Virtual Desktop investment. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Automatic Security 
+
+
+
+With Windows Virtual Desktop, concerns over ransomware, malware, and cyber-attacks are greatly reduced. This is because WVD creates an extra security layer that exists in Azure and does not rely on the device the employee is using – or how secure that device is.WVD is hosted in not just any cloud – it resides in Microsoft Azure, the leading cloud provider for enterprise security which gives access to a suite of comprehensive, easyto-use tools for maintaining your security posture. 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+Azure Active Directory Conditional Access to manage risks and apply the right access controls to users and devices
+
+
+
+ 
+Azure Firewall and Azure Sentinel to keep virtual desktops secure and reduce vulnerabilities with end-to-end security
+
+
+
+ 
+Multi-factor authentication and role-based access control (RBAC) for secure login and easy threat detection using Azure Security Cent
+
+
+
+ 
+Managing security in the cloud and adhering to Azure security best practices takes a particular skill set that many companies lack. For this reason, Partners like QDS can help you bridge the knowledge gap. Our experts understand every facet of Microsoft’s vast security toolset and will ensure your team knows how to leverage it to ensure end-to-end security for your virtual desktop implementation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Qatar Datamation System’s Rapid Deployment WVD Solution includes all of the standard Microsoft Windows Virtual Desktop features, plus: 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+							Supports up to 500 WVD users (Deployed in units of 25)						
+
+
+ 
+
+
+
+							1 WVD collection with 3 Applications included (Inquire about additional apps)						
+
+
+ 
+
+
+
+							Creation and support of the WVD collection						
+
+
+ 
+
+
+
+							1 instance of Azure AD Domain Services to act as a domain controller						
+
+
+
+Up to 5 Organizational Units will be configured to group users by organizational role to support Role Based Access Controls (RBAC)
+ 
+
+ 
+
+
+
+							1 Azure Storage Account configured for Azure Files						
+
+
+
+Up to 5 File Shares will be configured and up to 500 user prole shares will be configured
+A total of 1TB of data is included
+ 
+
+ 
+
+
+
+							1 Session Host VM (per 25 users) configured for pooled sessions (available as Windows 10 desktop sessions only)						
+
+
+ 
+
+
+
+							Requirements (Additional services available for custom solutions)						
+
+
+
+Microsoft M365 licenses included, let us know if you have your own
+Authentication to existing domains can be added, but may increase deployment timing
+All backups will occur at 12AM Central Time
+Legacy OS versions (Windows 7 or older) are not supported
+Custom patching schedules are supported, can be added post WVD launch
+We support the WVD environment, you support your applications
+Built-in Microsoft WVD compliance and security features are standard. Compliance and Security offerings are available
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Qatar Datamation System Rapid Deployment WVD solution includes:
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Out-of-Box Configuration					
+
+
+
+Simplified migration and management experience on Azure
+Azure Domain Controller
+File Server
+WVD Tenant
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Infrastructure					
+
+
+
+Server Management Domain
+VPN Management
+Network Policies
+On-Boarding Tools
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Users					
+
+
+
+AD User Management
+Simplified Group & Identity Management
+Office 365 User Management
+Group Management
+Shared Mailbox Management WVD
+Pooled Desktops
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Security					
+
+
+
+2FA for Admin Portal Login
+Content and Threat Filtering
+File Server
+Identity, Data, and Networking Protection
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Backup & DR					
+
+
+
+Backup Management
+Azure Storage Account
+Azure File Shares
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Qatar Datamation System WVD Solution					
+
+
+
+Cost Estimator
+Delivered by Qatar Datamation System, an Azure Expert Partner
+Unified WVD Management Via Azure Portal
+User Density, VM Sizing, Scaling Policies
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Success Stories 
+
+
+
+
+
+
+
+ Ministry of Culture and Sport 
+
+
+
+
+
+
+
+
+							Azure Ready Assessment						
+
+
+
+Interviews
+WVD Deployment scenario discussion
+Discovery of current infrastructur
+ 
+
+ 
+
+
+
+							Planning						
+
+
+
+Azure WVD Design Discussion
+Cloud Security Discussion
+Design Documents
+ 
+
+ 
+
+
+
+							Azure Infrastructure Readiness for WVD based on MOTC Approved design						
+
+
+ 
+
+
+
+							WVD session host deployment using custom images						
+
+
+ 
+
+
+
+							Profile management using FSLogix						
+
+
+ 
+
+
+
+							Dedicated host pools for each department						
+
+
+ 
+
+
+
+							87 virtual machines deployment						
+
+
+ 
+
+
+
+							Secure access using Azure MFA						
+
+
+ 
+
+
+
+							Patch management using Azure Update services						
+
+
+ 
+
+
+
+							Automatic shutdown/start of VMs using Azure automation						
+
+
+ 
+
+
+
+							Workplace monitoring and security using Azure Monitor and Security Center						
+
+
+
+
+
+
+
+
+
+
+
+
+ General Authority Of Customs 
+
+
+
+
+
+
+
+
+							Azure Ready Assessment						
+
+
+
+Requirement for Flexible and Specialized Workloads.
+WVD Deployment scenario with customizations
+Discovery of current infrastructure and provide best solution.
+ 
+
+ 
+
+
+
+							Planning						
+
+
+
+Azure WVD Design Discussion
+Enhanced Security with Simplified Configuration
+Superior Economics from Significant Cost Savings
+Simplified Management
+ 
+
+ 
+
+
+
+							Azure Infrastructure Readiness to mitigate COVID situation work from home approach						
+
+
+ 
+
+
+
+							Flexible user experience through a single host pool, with multiple app groups						
+
+
+ 
+
+
+
+							WVD independent session host deployment using custom images						
+
+
+ 
+
+
+
+							Profile management using FSLogix						
+
+
+ 
+
+
+
+							30+ virtual machines deployment to meet the requirement						
+
+
+ 
+
+
+
+							Secure access using Azure RBAC, MFA & CA.						
+
+
+ 
+
+
+
+							Simplified and effective troubleshooting using advanced diagnostic service						
+
+
+ 
+
+
+
+							Automatic shutdown/start of VMs using Azure automation						
+
+
+ 
+
+
+
+							One service supports both Desktop & RemoteApp experience						
+
+
+
+
+
+
+
+
+
+
+
+
+ Al-Rayyan TV 
+
+
+
+
+
+
+
+
+							Azure Ready Assessment						
+
+
+
+Provides virtualization infrastructure as a managed service
+Utilizes Azure Active Directory identity management service
+Simply connect to on-premise resources
+Lower labor cost because compute and storage move to cloud
+ 
+
+ 
+
+
+
+							Planning						
+
+
+
+Azure WVD Design Discussion
+Enhanced Security with Simplified Configuration
+Manage WVD VM’s using existing tools like Configuration Manager
+Modernized workloads for simplified deployment
+ 
+
+ 
+
+
+
+							Uniform deployment via serverless architecture						
+
+
+ 
+
+
+
+							3Host Pools as per Different Department requirement						
+
+
+ 
+
+
+
+							Azure BLOB Storage usage for custom images to be stored						
+
+
+ 
+
+
+
+							Profile management using FSLogix						
+
+
+ 
+
+
+
+							Isolated user sessions in both single and multi-session environments						
+
+
+ 
+
+
+
+							Sophisticated security services easily configured through Azure RBAC, MFA & CA						
+
+
+ 
+
+
+
+							Simplified and effective troubleshooting using advanced diagnostic service						
+
+
+ 
+
+
+
+							Reverse connect technology used to eliminates the need to open inbound ports to the VMs						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+Leave the IT to us and focus on your business 
+
+
+
+							We remove the headaches from IT so you can focus on what matters most. QDS is one of the leading System Integrators in Qatar to help businesses grow with confidence						
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Company Information 
+
+
+
+Al Darwish United Tower, Al Sadd Street 
+Al Sadd, Doha 13856
+Qatar 
+
+
+
+
+
+
+ 
+Phone: 974 44439900
+
+
+
+ 
+Fax:  974 44432154
+
+
+
+
+
+
+
+
+
+Facebook-f
+ 
+
+
+
+Linkedin-in
+ 
+
+
+
+Twitter
+ 
+
+
+
+
+
+
+
+
+
+
+Sitemap 
+
+
+
+
+
+
+About Us
+
+
+
+
+Services & Solutions
+
+
+
+
+Resources
+
+
+
+
+Blog
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© 2024 Qatar Datamation Systems. All Rights Reserved. 
+
+
+
+
+
+
+
+
+
+
+Privacy Policy
+
+
+
+
+Website by Pronto
+
+
+
+
+
+
+
+
+
+
+
+
+
+Scroll to Top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

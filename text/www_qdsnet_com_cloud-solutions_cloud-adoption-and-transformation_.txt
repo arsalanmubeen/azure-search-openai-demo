@@ -1,0 +1,1191 @@
+
+
+
+
+
+
+
+
+
+Cloud Adoption and Transformation - Qatar Datamation Systems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		Skip to content
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+Our Story
+News
+Partner & Certifications
+
+
+Services & Solutions
+
+Enterprise Computing
+Network & Security
+Business Applications
+Enterprise Solutions
+Managed IT Services
+
+
+Resources
+
+Blog
+
+
+Cloud Solutions
+
+Azure Application Modernization
+Cloud Adoption and Transformation
+Windows Virtual Desktop
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+About Us
+
+Our Story
+News
+Partner & Certifications
+
+
+Services & Solutions
+
+Enterprise Computing
+Network & Security
+Business Applications
+Enterprise Solutions
+Managed IT Services
+
+
+Resources
+
+Blog
+
+
+Cloud Solutions
+
+Azure Application Modernization
+Cloud Adoption and Transformation
+Windows Virtual Desktop
+
+
+ 
+
+ Menu
+
+
+About Us
+
+Our Story
+News
+Partner & Certifications
+
+
+Services & Solutions
+
+Enterprise Computing
+Network & Security
+Business Applications
+Enterprise Solutions
+Managed IT Services
+
+
+Resources
+
+Blog
+
+
+Cloud Solutions
+
+Azure Application Modernization
+Cloud Adoption and Transformation
+Windows Virtual Desktop
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+Cloud Adoption and Transformation 
+
+
+
+
+
+
+
+
+
+
+
+60+ Azure regions worldwide | 130,000 Miles of fiber optic cable systems under the sea | 5000+ services 
+
+
+
+							Our experts will customize Azure Cloud for your needs						
+
+
+
+
+
+
+
+
+
+
+
+							We believe Cloud is like a new Operating System. We steer our conversations with the client on answering “why” first before coming to where & what part of the cloud enablement question. Many a time, the answer lies in the business value client seeks on short term, medium term and long term						
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Consult					
+
+
+						Support proof of concepts and pilot projects. Cloud definition to recommend appropriate Cloudservices/solutions. Solution Assessments for migration- Cloud Economics, App Assessments.
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Design & Implement					
+
+
+						Cloud networking, Connectivity, Governance, Security, DevSecOps, FinOps, CloudOps. Implement QDS (Orchestration & Provisioning). Site Reliability Engineering.					
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+						Build with Business					
+
+
+						Evangelize and co-develop with business. Broker Cloud capabilities to IT. MVP build out for lines of business. Build Cloud native apps. Modernize existing apps.					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Empower to Innovate Faster 
+
+
+
+Another question we encounter from clients is team composition to sustain business on Cloud.To do so, democratization of Cloud & empowering employees to leverage Cloud with adequate safeguards is the most important change organizations have to go through.Moving to the Cloud is a fundamental shift & we help clients make Cloud their new home! 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Client’s Business Drivers determine the cloud journey
+
+ 
+
+
+
+A Strong Foundation for Scalability 
+
+
+
+Discussion on “why cloud” often helps clients to discover value levers for cloud enablement.With focus on value levers, Qatar Datamation Systems defines the right Cloud Foundation for the client. 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Alignment with Microsoft CAF 
+
+
+
+Qatar Datamation Systems leverages CAF framework of Microsoft to stream the enablement of identified value leversQatar Datamation Systems works closely with various cloud partners such as Cloudamize etc to do automated inventory analysis, Economic Assessment and establish a baseline of opportunities for cloud adoption 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Roadmap for Growth 
+
+
+
+Based on the value drivers in the short term, medium term and long term, Qatar Datamation Systems creates a roadmap of capability buildout for the client with Qatar Datamation Systems’s and ISV solutions and acceleratorsQDS for Governance, Security and ProvisioningAzure Migrate for migration to cloudCost Optimization Solution to help customer understand opportunities for cost reductionAddress operational items such as migration for “end of life” SQL server. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Success Stories 
+
+
+
+
+
+
+
+ Elan (Formerly QMEDIA)​ 
+
+
+
+
+
+
+ 
+Industry: Media
+
+
+
+ 
+Users: 500+
+
+
+
+ 
+Location: Qatar
+
+
+
+
+ 
+Video Case Study:
+
+
+
+
+
+
+
+
+
+
+
+
+							Azure Ready Assessment						
+
+
+
+Interviews
+Submission of Azure Migration Summary
+ 
+
+ 
+
+
+
+							Planning						
+
+
+
+Azure Infrastructure Design Discussion
+Cloud Security Discussion
+Design Documents
+ 
+
+ 
+
+
+
+							Azure Infrastructure Readiness based on MOTC Approved design						
+
+
+ 
+
+
+
+							Azure Infrastructure Build using Azure best practices						
+
+
+ 
+
+
+
+							Implement NVAs as cloud security best practices						
+
+
+ 
+
+
+
+							Lift and Shift of Virtual Machines (IaaS)						
+
+
+
+
+
+
+
+
+
+
+
+
+ Hamad bin Khalifa University 
+
+
+
+
+
+
+ 
+Industry: Education
+
+
+
+ 
+Users: 5000+
+
+
+
+ 
+Location: Qatar
+
+
+
+
+
+
+
+
+
+
+
+							Azure Ready Assessment						
+
+
+
+Interviews
+Submission of Azure Migration Summary
+ 
+
+ 
+
+
+
+							Planning						
+
+
+
+Azure Infrastructure Design Discussion
+Cloud Security Discussion
+Design Documents
+ 
+
+ 
+
+
+
+							Prepare On-Premises infrastructure to host users and data from Qatar Foundation						
+
+
+ 
+
+
+
+							Migration of Users and Data from QF to new AD Forest using Cross Forest Migration						
+
+
+ 
+
+
+
+							Azure Infrastructure Readiness based on Microsoft best practices						
+
+
+ 
+
+
+
+							Azure Infrastructure Build using Azure best practices						
+
+
+ 
+
+
+
+							Implement NVAs as cloud security best practices						
+
+
+ 
+
+
+
+							Extend the Datacenter to Azure (Hybrid Environment) using IaaS						
+
+
+ 
+
+
+
+							Deployment of learning solutions on Azure PaaS and Integrate with Azure AD						
+
+
+
+
+
+
+
+
+
+
+
+
+ Al Kass TV Channel 
+
+
+
+
+
+
+ 
+Industry: Media
+
+
+
+ 
+Employees: 1500+
+
+
+
+ 
+Location: Qatar
+
+
+
+
+
+
+
+
+
+
+
+							Azure Ready Assessment						
+
+
+
+Interviews
+Azure Migrate
+Infrastructure Workload Dependency Mapping
+Submission of Azure Migration Summary
+ 
+
+ 
+
+
+
+							Planning						
+
+
+
+Azure Infrastructure Design Discussion
+Cloud Security Discussion
+Design Documents
+ 
+
+ 
+
+
+
+							Azure Infrastructure Readiness based on MOTC Approved design						
+
+
+ 
+
+
+
+							Azure Infrastructure Build						
+
+
+ 
+
+
+
+							Implement NVAs as cloud security best practices						
+
+
+ 
+
+
+
+							Lift and Shift of Virtual Machines (IaaS)						
+
+
+ 
+
+
+
+							Re-Factor for Websites from Windows Servers to Web Apps (PaaS)						
+
+
+ 
+
+
+
+							Re-Factor the SQL Servers to SQL Managed Instances (PaaS)						
+
+
+
+
+
+
+
+
+
+
+
+
+ Ministry of Culture and Sports 
+
+
+
+
+
+
+ 
+Industry: Government
+
+
+
+ 
+Employees: 1200+
+
+
+
+ 
+Location: Qatar
+
+
+
+
+
+
+
+
+
+
+
+							Azure Assessment						
+
+
+
+Interviews
+Azure Migrate
+Infrastructure Workload Dependency Mapping
+Submission of Azure Migration Summary
+ 
+
+ 
+
+
+
+							Planning						
+
+
+
+Azure Infrastructure Design Discussion
+Cloud Security Discussion
+Design Documents
+ 
+
+ 
+
+
+
+							Azure Infrastructure Readiness based on MOTC Approved design						
+
+
+ 
+
+
+
+							Azure Infrastructure Build using Terraforms						
+
+
+ 
+
+
+
+							Implement NVAs from different ISVs as cloud security best practices						
+
+
+ 
+
+
+
+							Lift and Shift of Virtual Machines (IaaS)						
+
+
+ 
+
+
+
+							Re-Factor for Websites from Windows Servers to Web Apps (PaaS)						
+
+
+ 
+
+
+
+							Re-Factor the SQL Servers to SQL Managed Instances (PaaS)						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+Leave the IT to us and focus on your business 
+
+
+
+							We remove the headaches from IT so you can focus on what matters most. QDS is one of the leading System Integrators in Qatar to help businesses grow with confidence						
+
+
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Company Information 
+
+
+
+Al Darwish United Tower, Al Sadd Street 
+Al Sadd, Doha 13856
+Qatar 
+
+
+
+
+
+
+ 
+Phone: 974 44439900
+
+
+
+ 
+Fax:  974 44432154
+
+
+
+
+
+
+
+
+
+Facebook-f
+ 
+
+
+
+Linkedin-in
+ 
+
+
+
+Twitter
+ 
+
+
+
+
+
+
+
+
+
+
+Sitemap 
+
+
+
+
+
+
+About Us
+
+
+
+
+Services & Solutions
+
+
+
+
+Resources
+
+
+
+
+Blog
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© 2024 Qatar Datamation Systems. All Rights Reserved. 
+
+
+
+
+
+
+
+
+
+
+Privacy Policy
+
+
+
+
+Website by Pronto
+
+
+
+
+
+
+
+
+
+
+
+
+
+Scroll to Top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

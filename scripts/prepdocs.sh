@@ -2,6 +2,10 @@
 
 . ./scripts/loadenv.sh
 
+echo 'Running "Web_call.py"'
+
+./scripts/.venv/bin/python ./scripts/Web_call.py
+
 echo 'Running "prepdocs.py"'
 
 if [ -n "$AZURE_ADLS_GEN2_STORAGE_ACCOUNT" ]; then
@@ -79,3 +83,4 @@ $adlsGen2StorageAccountArg $adlsGen2FilesystemArg $adlsGen2FilesystemPathArg \
 $tenantArg $aclArg \
 $disableVectorsArg $localPdfParserArg \
 $keyVaultName
+

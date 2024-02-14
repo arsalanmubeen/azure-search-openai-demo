@@ -22,10 +22,12 @@ from prepdocslib.listfilestrategy import (
     ListFileStrategy,
     LocalListFileStrategy,
 )
+from Web_call import WEB_to_PDF
 from prepdocslib.parser import Parser
 from prepdocslib.pdfparser import DocumentAnalysisParser, LocalPdfParser
 from prepdocslib.strategy import SearchInfo, Strategy
 from prepdocslib.textsplitter import SentenceTextSplitter, SimpleTextSplitter
+
 
 
 def is_key_empty(key):
@@ -170,6 +172,7 @@ async def main(strategy: Strategy, credential: AsyncTokenCredential, args: Any):
 
 
 if __name__ == "__main__":
+    WEB_to_PDF()
     parser = argparse.ArgumentParser(
         description="Prepare documents by extracting content from PDFs, splitting content into sections, uploading to blob storage, and indexing in a search index.",
         epilog="Example: prepdocs.py '..\data\*' --storageaccount myaccount --container mycontainer --searchservice mysearch --index myindex -v",
