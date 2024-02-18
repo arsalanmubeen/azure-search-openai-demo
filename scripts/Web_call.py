@@ -13,10 +13,10 @@ from urllib.parse import urlparse
 from collections import deque
 from bs4 import BeautifulSoup
 
-directory = os.getenv("output_directory")
+#directory = os.getenv("output_directory")
+#output_directory = directory
 
-output_directory = directory
-#output_directory = r'E:\QDS\azure-search-openai-demo'
+output_directory = r'E:\QDS\azure-search-openai-demo'
 output_directory2 = output_directory+r'\text'
 
 # Regex pattern to match a URL

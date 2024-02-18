@@ -15,19 +15,20 @@ from prepdocslib.embeddings import (
     OpenAIEmbeddingService,
 )
 from prepdocslib.fileprocessor import FileProcessor
-from prepdocslib.filestrategy import DocumentAction, FileStrategy
+from prepdocslib.filestrategy import FileStrategy
+from prepdocslib.integratedvectorizerstrategy import (
+    IntegratedVectorizerStrategy,
+)
 from prepdocslib.jsonparser import JsonParser
 from prepdocslib.listfilestrategy import (
     ADLSGen2ListFileStrategy,
     ListFileStrategy,
     LocalListFileStrategy,
 )
-from Web_call import WEB_to_PDF
 from prepdocslib.parser import Parser
 from prepdocslib.pdfparser import DocumentAnalysisParser, LocalPdfParser
-from prepdocslib.strategy import SearchInfo, Strategy
+from prepdocslib.strategy import DocumentAction, SearchInfo, Strategy
 from prepdocslib.textsplitter import SentenceTextSplitter, SimpleTextSplitter
-
 
 
 def is_key_empty(key):
@@ -47,12 +48,15 @@ async def get_vision_key(credential: AsyncTokenCredential) -> Optional[str]:
         exit(1)
 
 
-async def setup_file_strategy(credential: AsyncTokenCredential, args: Any) -> FileStrategy:
+async def setup_file_strategy(credential: AsyncTokenCredential, args: Any) -> Strategy:
     storage_creds = credential if is_key_empty(args.storagekey) else args.storagekey
     blob_manager = BlobManager(
         endpoint=f"https://{args.storageaccount}.blob.core.windows.net",
         container=args.container,
+        account=args.storageaccount,
         credential=storage_creds,
+        resourceGroup=args.storageresourcegroup,
+        subscriptionId=args.subscriptionid,
         store_page_images=args.searchimages,
         verbose=args.verbose,
     )
@@ -61,16 +65,18 @@ async def setup_file_strategy(credential: AsyncTokenCredential, args: Any) -> Fi
     doc_int_parser: DocumentAnalysisParser
 
     # check if Azure Document Intelligence credentials are provided
-    if args.formrecognizerservice is not None:
-        formrecognizer_creds: Union[AsyncTokenCredential, AzureKeyCredential] = (
-            credential if is_key_empty(args.formrecognizerkey) else AzureKeyCredential(args.formrecognizerkey)
+    if args.documentintelligenceservice is not None:
+        documentintelligence_creds: Union[AsyncTokenCredential, AzureKeyCredential] = (
+            credential
+            if is_key_empty(args.documentintelligencekey)
+            else AzureKeyCredential(args.documentintelligencekey)
         )
         doc_int_parser = DocumentAnalysisParser(
-            endpoint=f"https://{args.formrecognizerservice}.cognitiveservices.azure.com/",
-            credential=formrecognizer_creds,
+            endpoint=f"https://{args.documentintelligenceservice}.cognitiveservices.azure.com/",
+            credential=documentintelligence_creds,
             verbose=args.verbose,
         )
-    if args.localpdfparser or args.formrecognizerservice is None:
+    if args.localpdfparser or args.documentintelligenceservice is None:
         pdf_parser = LocalPdfParser()
     else:
         pdf_parser = doc_int_parser
@@ -79,6 +85,14 @@ async def setup_file_strategy(credential: AsyncTokenCredential, args: Any) -> Fi
         ".pdf": FileProcessor(pdf_parser, sentence_text_splitter),
         ".json": FileProcessor(JsonParser(), SimpleTextSplitter()),
         ".docx": FileProcessor(doc_int_parser, sentence_text_splitter),
+        ".pptx": FileProcessor(doc_int_parser, sentence_text_splitter),
+        ".xlsx": FileProcessor(doc_int_parser, sentence_text_splitter),
+        ".png": FileProcessor(doc_int_parser, sentence_text_splitter),
+        ".jpg": FileProcessor(doc_int_parser, sentence_text_splitter),
+        ".jpeg": FileProcessor(doc_int_parser, sentence_text_splitter),
+        ".tiff": FileProcessor(doc_int_parser, sentence_text_splitter),
+        ".bmp": FileProcessor(doc_int_parser, sentence_text_splitter),
+        ".heic": FileProcessor(doc_int_parser, sentence_text_splitter),
     }
     use_vectors = not args.novectors
     embeddings: Optional[OpenAIEmbeddings] = None
@@ -147,6 +161,70 @@ async def setup_file_strategy(credential: AsyncTokenCredential, args: Any) -> Fi
     )
 
 
+async def setup_intvectorizer_strategy(credential: AsyncTokenCredential, args: Any) -> Strategy:
+    storage_creds = credential if is_key_empty(args.storagekey) else args.storagekey
+    blob_manager = BlobManager(
+        endpoint=f"https://{args.storageaccount}.blob.core.windows.net",
+        container=args.container,
+        account=args.storageaccount,
+        credential=storage_creds,
+        resourceGroup=args.storageresourcegroup,
+        subscriptionId=args.subscriptionid,
+        store_page_images=args.searchimages,
+        verbose=args.verbose,
+    )
+
+    use_vectors = not args.novectors
+    embeddings: Union[AzureOpenAIEmbeddingService, None] = None
+    if use_vectors and args.openaihost != "openai":
+        azure_open_ai_credential: Union[AsyncTokenCredential, AzureKeyCredential] = (
+            credential if is_key_empty(args.openaikey) else AzureKeyCredential(args.openaikey)
+        )
+        embeddings = AzureOpenAIEmbeddingService(
+            open_ai_service=args.openaiservice,
+            open_ai_deployment=args.openaideployment,
+            open_ai_model_name=args.openaimodelname,
+            credential=azure_open_ai_credential,
+            disable_batch=args.disablebatchvectors,
+            verbose=args.verbose,
+        )
+
+    print("Processing files...")
+    list_file_strategy: ListFileStrategy
+    if args.datalakestorageaccount:
+        adls_gen2_creds = credential if is_key_empty(args.datalakekey) else args.datalakekey
+        print(f"Using Data Lake Gen2 Storage Account {args.datalakestorageaccount}")
+        list_file_strategy = ADLSGen2ListFileStrategy(
+            data_lake_storage_account=args.datalakestorageaccount,
+            data_lake_filesystem=args.datalakefilesystem,
+            data_lake_path=args.datalakepath,
+            credential=adls_gen2_creds,
+            verbose=args.verbose,
+        )
+    else:
+        print(f"Using local files in {args.files}")
+        list_file_strategy = LocalListFileStrategy(path_pattern=args.files, verbose=args.verbose)
+
+    if args.removeall:
+        document_action = DocumentAction.RemoveAll
+    elif args.remove:
+        document_action = DocumentAction.Remove
+    else:
+        document_action = DocumentAction.Add
+
+    return IntegratedVectorizerStrategy(
+        list_file_strategy=list_file_strategy,
+        blob_manager=blob_manager,
+        document_action=document_action,
+        embeddings=embeddings,
+        subscription_id=args.subscriptionid,
+        search_service_user_assigned_id=args.searchserviceassignedid,
+        search_analyzer_name=args.searchanalyzername,
+        use_acls=args.useacls,
+        category=args.category,
+    )
+
+
 async def main(strategy: Strategy, credential: AsyncTokenCredential, args: Any):
     search_key = args.searchkey
     if args.keyvaultname and args.searchsecretname:
@@ -172,7 +250,6 @@ async def main(strategy: Strategy, credential: AsyncTokenCredential, args: Any):
 
 
 if __name__ == "__main__":
-    WEB_to_PDF()
     parser = argparse.ArgumentParser(
         description="Prepare documents by extracting content from PDFs, splitting content into sections, uploading to blob storage, and indexing in a search index.",
         epilog="Example: prepdocs.py '..\data\*' --storageaccount myaccount --container mycontainer --searchservice mysearch --index myindex -v",
@@ -206,6 +283,7 @@ if __name__ == "__main__":
     )
     parser.add_argument("--storageaccount", help="Azure Blob Storage account name")
     parser.add_argument("--container", help="Azure Blob Storage container name")
+    parser.add_argument("--storageresourcegroup", help="Azure blob storage resource group")
     parser.add_argument(
         "--storagekey",
         required=False,
@@ -215,8 +293,18 @@ if __name__ == "__main__":
         "--tenantid", required=False, help="Optional. Use this to define the Azure directory where to authenticate)"
     )
     parser.add_argument(
+        "--subscriptionid",
+        required=False,
+        help="Optional. Use this to define managed identity connection string in integrated vectorization",
+    )
+    parser.add_argument(
         "--searchservice",
         help="Name of the Azure AI Search service where content should be indexed (must exist already)",
+    )
+    parser.add_argument(
+        "--searchserviceassignedid",
+        required=False,
+        help="Search service system assigned Identity (Managed identity) (used for integrated vectorization)",
     )
     parser.add_argument(
         "--index",
@@ -277,12 +365,12 @@ if __name__ == "__main__":
         help="Use PyPdf local PDF parser (supports only digital PDFs) instead of Azure Document Intelligence service to extract text, tables and layout from the documents",
     )
     parser.add_argument(
-        "--formrecognizerservice",
+        "--documentintelligenceservice",
         required=False,
         help="Optional. Name of the Azure Document Intelligence service which will be used to extract text, tables and layout from the documents (must exist already)",
     )
     parser.add_argument(
-        "--formrecognizerkey",
+        "--documentintelligencekey",
         required=False,
         help="Optional. Use this Azure Document Intelligence account key instead of the current user identity to login (use az login to set current user for Azure)",
     )
@@ -312,8 +400,14 @@ if __name__ == "__main__":
         required=False,
         help="Required if --searchimages is specified and --keyvaultname is provided. Fetch the Azure AI Vision key from this key vault instead of using the current user identity to login.",
     )
+    parser.add_argument(
+        "--useintvectorization",
+        required=False,
+        help="Required if --useintvectorization is specified. Enable Integrated vectorizer indexer support which is in preview)",
+    )
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
     args = parser.parse_args()
+    use_int_vectorization = args.useintvectorization and args.useintvectorization.lower() == "true"
 
     # Use the current user identity to connect to Azure services unless a key is explicitly set for any of them
     azd_credential = (
@@ -322,7 +416,12 @@ if __name__ == "__main__":
         else AzureDeveloperCliCredential(tenant_id=args.tenantid, process_timeout=60)
     )
 
-    loop = asyncio.get_event_loop()
-    file_strategy = loop.run_until_complete(setup_file_strategy(azd_credential, args))
-    loop.run_until_complete(main(file_strategy, azd_credential, args))
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    ingestion_strategy = None
+    if use_int_vectorization:
+        ingestion_strategy = loop.run_until_complete(setup_intvectorizer_strategy(azd_credential, args))
+    else:
+        ingestion_strategy = loop.run_until_complete(setup_file_strategy(azd_credential, args))
+    loop.run_until_complete(main(ingestion_strategy, azd_credential, args))
     loop.close()
