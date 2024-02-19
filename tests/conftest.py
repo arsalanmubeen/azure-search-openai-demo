@@ -9,6 +9,7 @@ import azure.storage.filedatalake.aio
 import msal
 import pytest
 import pytest_asyncio
+import azure.cognitiveservices.speech as speechsdk
 from azure.keyvault.secrets.aio import SecretClient
 from azure.search.documents.aio import SearchClient
 from azure.search.documents.indexes.aio import SearchIndexClient
@@ -25,6 +26,32 @@ from openai.types.create_embedding_response import Usage
 import app
 import core
 from core.authentication import AuthenticationHelper
+
+class MockAzureChainedCredential:
+    def get_token(self, uri):
+        return MockToken("mock_token", 9999999999)
+
+
+@pytest.fixture
+def mock_speechsdk(monkeypatch):
+    class Mock_Audio:
+        def __init__(self, audio_data):
+            self.audio_data = audio_data
+
+        def read(self):
+            return self.audio_data
+
+    class SythesisResult:
+        def __init__(self, result):
+            self.__result = result
+
+        def get(self):
+            return self.__result
+
+    def mock_speak_text_async(self, text):
+        return SythesisResult(Mock_Audio("mock_audio_data"))
+
+    monkeypatch.setattr(speechsdk.SpeechSynthesizer, "speak_text_async", mock_speak_text_async)
 
 from .mocks import (
     MockAsyncSearchResultsIterator,
@@ -310,17 +337,23 @@ async def auth_client(
     mock_acs_search_filter,
     mock_get_secret,
     request,
+    mock_speechsdk,
 ):
     monkeypatch.setenv("AZURE_STORAGE_ACCOUNT", "test-storage-account")
     monkeypatch.setenv("AZURE_STORAGE_CONTAINER", "test-storage-container")
     monkeypatch.setenv("AZURE_SEARCH_INDEX", "test-search-index")
     monkeypatch.setenv("AZURE_SEARCH_SERVICE", "test-search-service")
     monkeypatch.setenv("AZURE_OPENAI_CHATGPT_MODEL", "gpt-35-turbo")
+    monkeypatch.setenv("AZURE_SPEECH_RESOURCE_ID", "test-id")
+    monkeypatch.setenv("AZURE_SPEECH_REGION", "eastus")
     for key, value in request.param.items():
         monkeypatch.setenv(key, value)
 
-    with mock.patch("app.DefaultAzureCredential") as mock_default_azure_credential:
+    with mock.patch("app.DefaultAzureCredential") as mock_default_azure_credential, mock.patch(
+        "app.ChainedTokenCredential"
+    ) as mock_speech_azure_credential:
         mock_default_azure_credential.return_value = MockAzureCredential()
+        mock_speech_azure_credential.return_value = MockAzureChainedCredential()
         quart_app = app.create_app()
 
         async with quart_app.test_app() as test_app:

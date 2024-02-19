@@ -17,6 +17,11 @@ param applicationInsightsDashboardName string = ''
 param applicationInsightsName string = ''
 param logAnalyticsName string = ''
 
+param speechResourceGroupName string = ''
+param speechResourceGroupLocation string = location
+param speechServiceName string = ''
+param speechServiceSkuName string = 'S0'
+
 param searchServiceName string = ''
 param searchServiceResourceGroupName string = ''
 param searchServiceLocation string = ''
@@ -116,6 +121,9 @@ param allowedOrigin string = '' // should start with https://, shouldn't end wit
 @description('Id of the user or app to assign application roles')
 param principalId string = ''
 
+@description('Use speech resource for reading out.')
+param useSpeechResource bool = true
+
 @description('Use Application Insights for monitoring and performance tracing')
 param useApplicationInsights bool = false
 
@@ -133,6 +141,10 @@ var useKeyVault = useGPT4V || useSearchServiceKey
 var tenantIdForAuth = !empty(authTenantId) ? authTenantId : tenantId
 var authenticationIssuerUri = '${environment().authentication.loginEndpoint}${tenantIdForAuth}/v2.0'
 
+var speechResourceGroupNameString = !empty(speechResourceGroupName) ? speechResourceGroupName : resourceGroup.name
+var speechServiceNameString = !empty(speechServiceName) ? speechServiceName : '${abbrs.cognitiveServicesSpeech}${resourceToken}'
+var speechResourceID = '${subscription().id}/resourceGroups/${speechResourceGroupNameString}/providers/Microsoft.CognitiveServices/accounts/${speechServiceNameString}'
+
 @description('Whether the deployment is running on GitHub Actions')
 param runningOnGh string = ''
 
@@ -148,6 +160,10 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
 
 resource openAiResourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' existing = if (!empty(openAiResourceGroupName)) {
   name: !empty(openAiResourceGroupName) ? openAiResourceGroupName : resourceGroup.name
+}
+
+resource speechResourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' existing = if (!empty(speechResourceGroupName)) {
+  name: speechResourceGroupNameString
 }
 
 resource documentIntelligenceResourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' existing = if (!empty(documentIntelligenceResourceGroupName)) {
@@ -244,6 +260,8 @@ module backend 'core/host/appservice.bicep' = {
       AZURE_SEARCH_QUERY_LANGUAGE: searchQueryLanguage
       AZURE_SEARCH_QUERY_SPELLER: searchQuerySpeller
       APPLICATIONINSIGHTS_CONNECTION_STRING: useApplicationInsights ? monitoring.outputs.applicationInsightsConnectionString : ''
+      AZURE_SPEECH_RESOURCE_ID : useSpeechResource ? speechResourceID : ''
+      AZURE_SPEECH_REGION : useSpeechResource ? speechResourceGroupLocation : ''
       // Shared by all OpenAI deployments
       OPENAI_HOST: openAiHost
       AZURE_OPENAI_CUSTOM_URL: azureOpenAiCustomUrl
@@ -344,6 +362,40 @@ module documentIntelligence 'core/ai/cognitiveservices.bicep' = {
     sku: {
       name: documentIntelligenceSkuName
     }
+  }
+}
+
+module speechRecognizer 'core/ai/cognitiveservices.bicep' = if (useSpeechResource){
+  name: 'speechRecognizer'
+  scope: speechResourceGroup
+  params: {
+    name: speechServiceNameString
+    kind: 'SpeechServices'
+    location: speechResourceGroupLocation
+    tags: tags
+    sku: {
+      name: speechServiceSkuName
+    }
+  }
+}
+
+module SpeechRoleUser 'core/security/role.bicep' = {
+  scope: speechResourceGroup
+  name: 'speech-role-user'
+  params: {
+    principalId: principalId
+    roleDefinitionId: 'f2dc8367-1007-4938-bd23-fe263f013447'
+    principalType: 'User'
+  }
+}
+
+module speechRoleBackend 'core/security/role.bicep' = {
+  scope: speechResourceGroup
+  name: 'speech-role-backend'
+  params: {
+    principalId: backend.outputs.identityPrincipalId
+    roleDefinitionId: 'f2dc8367-1007-4938-bd23-fe263f013447'
+    principalType: 'ServicePrincipal'
   }
 }
 
@@ -599,6 +651,9 @@ output AZURE_OPENAI_RESOURCE_GROUP string = (openAiHost == 'azure') ? openAiReso
 output AZURE_OPENAI_CHATGPT_DEPLOYMENT string = (openAiHost == 'azure') ? chatGptDeploymentName : ''
 output AZURE_OPENAI_EMB_DEPLOYMENT string = (openAiHost == 'azure') ? embeddingDeploymentName : ''
 output AZURE_OPENAI_GPT4V_DEPLOYMENT string = (openAiHost == 'azure') ? gpt4vDeploymentName : ''
+
+output AZURE_SPEECH_RESOURCE_ID string = useSpeechResource ? speechResourceID : ''
+output AZURE_SPEECH_REGION string = useSpeechResource ? speechResourceGroupLocation : ''
 
 // Used only with non-Azure OpenAI deployments
 output OPENAI_API_KEY string = (openAiHost == 'openai') ? openAiApiKey : ''

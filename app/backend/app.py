@@ -11,6 +11,10 @@ from azure.core.credentials import AzureKeyCredential
 from azure.core.credentials_async import AsyncTokenCredential
 from azure.core.exceptions import ResourceNotFoundError
 from azure.identity.aio import DefaultAzureCredential, get_bearer_token_provider
+
+import azure.cognitiveservices.speech as speechsdk
+from azure.identity import AzureCliCredential, ChainedTokenCredential, ManagedIdentityCredential
+
 from azure.keyvault.secrets.aio import SecretClient
 from azure.monitor.opentelemetry import configure_azure_monitor
 from azure.search.documents.aio import SearchClient
@@ -50,6 +54,8 @@ from config import (
     CONFIG_SEARCH_CLIENT,
     CONFIG_SEMANTIC_RANKER_DEPLOYED,
     CONFIG_VECTOR_SEARCH_ENABLED,
+    CONFIG_SPEECH_CREDENTIAL,
+    CONFIG_SPEECH_TOKEN,
 )
 from core.authentication import AuthenticationHelper
 from decorators import authenticated, authenticated_path
@@ -115,6 +121,32 @@ async def content_file(path: str):
     blob_file.seek(0)
     return await send_file(blob_file, mimetype=mime_type, as_attachment=False, attachment_filename=path)
 
+@bp.route("/speech", methods=["POST"])
+async def speech():
+    AZURE_SPEECH_RESOURCEID = os.getenv("AZURE_SPEECH_RESOURCE_ID")
+    AZURE_SPEECH_REGION = os.getenv("AZURE_SPEECH_REGION")
+
+    if not AZURE_SPEECH_RESOURCEID or AZURE_SPEECH_RESOURCEID == "":
+        return jsonify({"error": "speech resource not configured"}), 400
+
+    await ensure_speech_token()
+    if not request.is_json:
+        return jsonify({"error": "request must be json"}), 415
+
+    request_json = await request.get_json()
+    text = request_json["text"]
+    try:
+        auth_token = "aad#" + AZURE_SPEECH_RESOURCEID + "#" + current_app.config[CONFIG_SPEECH_TOKEN].token
+        speech_config = speechsdk.SpeechConfig(auth_token=auth_token, region=AZURE_SPEECH_REGION)
+        speech_config.speech_synthesis_voice_name = "en-US-SaraNeural"
+        speech_config.speech_synthesis_output_format = speechsdk.SpeechSynthesisOutputFormat.Audio16Khz32KBitRateMonoMp3
+        synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=None)
+        result = synthesizer.speak_text_async(text).get()
+        return result.audio_data, 200, {"Content-Type": "audio/mp3"}
+    except Exception as e:
+        logging.exception("Exception in /speech")
+        return jsonify({"error": str(e)}), 500
+
 
 @bp.route("/ask", methods=["POST"])
 @authenticated
@@ -153,6 +185,12 @@ async def format_as_ndjson(r: AsyncGenerator[dict, None]) -> AsyncGenerator[str,
     except Exception as error:
         logging.exception("Exception while generating response stream: %s", error)
         yield json.dumps(error_dict(error))
+
+async def ensure_speech_token():
+    speech_token = current_app.config[CONFIG_SPEECH_TOKEN]
+    if speech_token.expires_on < time.time() + 60:
+        speech_token = current_app.config[CONFIG_SPEECH_CREDENTIAL].get_token("https://cognitiveservices.azure.com")
+        current_app.config[CONFIG_SPEECH_TOKEN] = speech_token
 
 
 @bp.route("/chat", methods=["POST"])
@@ -324,6 +362,13 @@ async def setup_clients():
 
     current_app.config[CONFIG_OPENAI_CLIENT] = openai_client
     current_app.config[CONFIG_SEARCH_CLIENT] = search_client
+
+    if not os.getenv("AZURE_SPEECH_RESOURCE_ID") == "":
+        speech_credential = ChainedTokenCredential(ManagedIdentityCredential(), AzureCliCredential())
+        speech_token = speech_credential.get_token("https://cognitiveservices.azure.com/")
+        current_app.config[CONFIG_SPEECH_CREDENTIAL] = speech_credential
+        current_app.config[CONFIG_SPEECH_TOKEN] = speech_token
+
     current_app.config[CONFIG_BLOB_CONTAINER_CLIENT] = blob_container_client
     current_app.config[CONFIG_AUTH_CLIENT] = auth_helper
 

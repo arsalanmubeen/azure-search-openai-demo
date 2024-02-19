@@ -133,6 +133,12 @@
     },
     "runningOnAdo": {
       "value": "${TF_BUILD}"
+    },
+    "speechServiceName": {
+      "value": "${AZURE_SPEECH_SERVICE}"
+    },
+    "speechResourceGroupName": {
+      "value": "${AZURE_SPEECH_RESOURCE_GROUP}"
     }
   }
 }

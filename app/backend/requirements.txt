@@ -356,3 +356,4 @@ zipp==3.17.0
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
+azure-cognitiveservices-speech==1.27.0

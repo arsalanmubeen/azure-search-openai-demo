@@ -644,6 +644,25 @@ async def test_ask_vision(client, snapshot):
     result = await response.get_json()
     snapshot.assert_match(json.dumps(result, indent=4), "result.json")
 
+@pytest.mark.asyncio
+async def test_speech(client):
+    response = await client.post(
+        "/speech",
+        json={
+            "text": "test",
+        },
+    )
+    assert response.status_code == 200
+    assert await response.get_data() == b"mock_audio_data"
+
+
+@pytest.mark.asyncio
+async def test_speech_request_must_be_json(client):
+    response = await client.post("/speech")
+    assert response.status_code == 415
+    result = await response.get_json()
+    assert result["error"] == "request must be json"    
+
 
 @pytest.mark.asyncio
 async def test_format_as_ndjson():
