@@ -104,24 +104,24 @@ def test_get_messages_from_history(chat_approach):
         system_prompt="You are a bot.",
         model_id="gpt-35-turbo",
         history=[
-            {"role": "user", "content": "What happens in a performance review?"},
+            {"role": "user", "content": "What services does QDS provide as a leading IT service provider?"},
             {
                 "role": "assistant",
                 "content": "During the performance review at Contoso Electronics, the supervisor will discuss the employee's performance over the past year and provide feedback on areas for improvement. They will also provide an opportunity for the employee to discuss their goals and objectives for the upcoming year. The review is a two-way dialogue between managers and employees, and employees will receive a written summary of their performance review which will include a rating of their performance, feedback, and goals and objectives for the upcoming year [employee_handbook-3.pdf].",
             },
-            {"role": "user", "content": "What does a Product Manager do?"},
+            {"role": "user", "content": "What other awards has QDS received?"},
         ],
-        user_content="What does a Product Manager do?",
+        user_content="What other awards has QDS received?",
         max_tokens=3000,
     )
     assert messages == [
         {"role": "system", "content": "You are a bot."},
-        {"role": "user", "content": "What happens in a performance review?"},
+        {"role": "user", "content": "What services does QDS provide as a leading IT service provider?"},
         {
             "role": "assistant",
             "content": "During the performance review at Contoso Electronics, the supervisor will discuss the employee's performance over the past year and provide feedback on areas for improvement. They will also provide an opportunity for the employee to discuss their goals and objectives for the upcoming year. The review is a two-way dialogue between managers and employees, and employees will receive a written summary of their performance review which will include a rating of their performance, feedback, and goals and objectives for the upcoming year [employee_handbook-3.pdf].",
         },
-        {"role": "user", "content": "What does a Product Manager do?"},
+        {"role": "user", "content": "What other awards has QDS received?"},
     ]
 
 
@@ -130,19 +130,19 @@ def test_get_messages_from_history_truncated(chat_approach):
         system_prompt="You are a bot.",
         model_id="gpt-35-turbo",
         history=[
-            {"role": "user", "content": "What happens in a performance review?"},
+            {"role": "user", "content": "What services does QDS provide as a leading IT service provider?"},
             {
                 "role": "assistant",
                 "content": "During the performance review at Contoso Electronics, the supervisor will discuss the employee's performance over the past year and provide feedback on areas for improvement. They will also provide an opportunity for the employee to discuss their goals and objectives for the upcoming year. The review is a two-way dialogue between managers and employees, and employees will receive a written summary of their performance review which will include a rating of their performance, feedback, and goals and objectives for the upcoming year [employee_handbook-3.pdf].",
             },
-            {"role": "user", "content": "What does a Product Manager do?"},
+            {"role": "user", "content": "What other awards has QDS received?"},
         ],
-        user_content="What does a Product Manager do?",
+        user_content="What other awards has QDS received?",
         max_tokens=10,
     )
     assert messages == [
         {"role": "system", "content": "You are a bot."},
-        {"role": "user", "content": "What does a Product Manager do?"},
+        {"role": "user", "content": "What other awards has QDS received?"},
     ]
 
 
@@ -151,7 +151,7 @@ def test_get_messages_from_history_truncated_longer(chat_approach):
         system_prompt="You are a bot.",  # 8 tokens
         model_id="gpt-35-turbo",
         history=[
-            {"role": "user", "content": "What happens in a performance review?"},  # 10 tokens
+            {"role": "user", "content": "What services does QDS provide as a leading IT service provider?"},  # 10 tokens
             {
                 "role": "assistant",
                 "content": "During the performance review at Contoso Electronics, the supervisor will discuss the employee's performance over the past year and provide feedback on areas for improvement. They will also provide an opportunity for the employee to discuss their goals and objectives for the upcoming year. The review is a two-way dialogue between managers and employees, and employees will receive a written summary of their performance review which will include a rating of their performance, feedback, and goals and objectives for the upcoming year [employee_handbook-3.pdf].",
@@ -161,9 +161,9 @@ def test_get_messages_from_history_truncated_longer(chat_approach):
                 "role": "assistant",
                 "content": "Yes, there is a dress code at Contoso Electronics. Look sharp! [employee_handbook-1.pdf]",
             },  # 26 tokens
-            {"role": "user", "content": "What does a Product Manager do?"},  # 10 tokens
+            {"role": "user", "content": "What other awards has QDS received?"},  # 10 tokens
         ],
-        user_content="What does a Product Manager do?",
+        user_content="What other awards has QDS received?",
         max_tokens=55,
     )
     assert messages == [
@@ -173,7 +173,7 @@ def test_get_messages_from_history_truncated_longer(chat_approach):
             "role": "assistant",
             "content": "Yes, there is a dress code at Contoso Electronics. Look sharp! [employee_handbook-1.pdf]",
         },
-        {"role": "user", "content": "What does a Product Manager do?"},
+        {"role": "user", "content": "What other awards has QDS received?"},
     ]
 
 
@@ -183,7 +183,7 @@ def test_get_messages_from_history_truncated_break_pair(chat_approach):
         system_prompt="You are a bot.",  # 8 tokens
         model_id="gpt-35-turbo",
         history=[
-            {"role": "user", "content": "What happens in a performance review?"},  # 10 tokens
+            {"role": "user", "content": "What services does QDS provide as a leading IT service provider?"},  # 10 tokens
             {
                 "role": "assistant",
                 "content": "The supervisor will discuss the employee's performance and provide feedback on areas for improvement. They will also provide an opportunity for the employee to discuss their goals and objectives for the upcoming year. The review is a two-way dialogue between managers and employees, and employees will receive a written summary of their performance review which will include a rating of their performance, feedback, and goals for the upcoming year [employee_handbook-3.pdf].",
@@ -193,9 +193,9 @@ def test_get_messages_from_history_truncated_break_pair(chat_approach):
                 "role": "assistant",
                 "content": "Yes, there is a dress code at Contoso Electronics. Look sharp! [employee_handbook-1.pdf]",
             },  # 26 tokens
-            {"role": "user", "content": "What does a Product Manager do?"},  # 10 tokens
+            {"role": "user", "content": "What other awards has QDS received?"},  # 10 tokens
         ],
-        user_content="What does a Product Manager do?",
+        user_content="What other awards has QDS received?",
         max_tokens=147,
     )
     assert messages == [
@@ -209,7 +209,7 @@ def test_get_messages_from_history_truncated_break_pair(chat_approach):
             "role": "assistant",
             "content": "Yes, there is a dress code at Contoso Electronics. Look sharp! [employee_handbook-1.pdf]",
         },
-        {"role": "user", "content": "What does a Product Manager do?"},
+        {"role": "user", "content": "What other awards has QDS received?"},
     ]
 
 
@@ -219,7 +219,7 @@ def test_get_messages_from_history_system_message(chat_approach):
         system_prompt="Assistant helps the company employees with their healthcare plan questions, and questions about the employee handbook. Be brief in your answers.",  # 24 tokens
         model_id="gpt-35-turbo",
         history=[
-            {"role": "user", "content": "What happens in a performance review?"},  # 10 tokens
+            {"role": "user", "content": "What services does QDS provide as a leading IT service provider?"},  # 10 tokens
             {
                 "role": "assistant",
                 "content": "During the performance review at Contoso Electronics, the supervisor will discuss the employee's performance over the past year and provide feedback on areas for improvement. They will also provide an opportunity for the employee to discuss their goals and objectives for the upcoming year. The review is a two-way dialogue between managers and employees, and employees will receive a written summary of their performance review which will include a rating of their performance, feedback, and goals and objectives for the upcoming year [employee_handbook-3.pdf].",
@@ -229,9 +229,9 @@ def test_get_messages_from_history_system_message(chat_approach):
                 "role": "assistant",
                 "content": "Yes, there is a dress code at Contoso Electronics. Look sharp! [employee_handbook-1.pdf]",
             },  # 26 tokens
-            {"role": "user", "content": "What does a Product Manager do?"},  # 10 tokens
+            {"role": "user", "content": "What other awards has QDS received?"},  # 10 tokens
         ],
-        user_content="What does a Product Manager do?",
+        user_content="What other awards has QDS received?",
         max_tokens=36,
     )
     assert messages == [
@@ -239,7 +239,7 @@ def test_get_messages_from_history_system_message(chat_approach):
             "role": "system",
             "content": "Assistant helps the company employees with their healthcare plan questions, and questions about the employee handbook. Be brief in your answers.",
         },
-        {"role": "user", "content": "What does a Product Manager do?"},
+        {"role": "user", "content": "What other awards has QDS received?"},
     ]
 
 
@@ -280,7 +280,7 @@ def test_extract_followup_questions_no_pre_content(chat_approach):
 
 
 def test_get_messages_from_history_few_shots(chat_approach):
-    user_query_request = "What does a Product manager do?"
+    user_query_request = "What other awards has QDS received?"
     messages = chat_approach.get_messages_from_history(
         system_prompt=chat_approach.query_prompt_template,
         model_id=chat_approach.chatgpt_model,

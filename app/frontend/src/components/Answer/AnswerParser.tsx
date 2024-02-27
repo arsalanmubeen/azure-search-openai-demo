@@ -43,8 +43,16 @@ export function parseAnswerToHtml(answer: string, isStreaming: boolean, onCitati
 
             const path = getCitationFilePath(part);
 
+            const onClickHandler = () => {
+                if (part.includes("www")) {
+                    window.open(part, "_blank");
+                } else {
+                    onCitationClicked(path);
+                }
+            };
+
             return renderToStaticMarkup(
-                <a className="supContainer" title={part} onClick={() => onCitationClicked(path)}>
+                <a href={path} className="supContainer" title={part} onClick={onClickHandler}>
                     <sup>{citationIndex}</sup>
                 </a>
             );

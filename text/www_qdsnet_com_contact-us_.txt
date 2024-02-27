@@ -383,7 +383,7 @@ First Name
 
 Email*
 
-MessageNameThis field is for validation purposes and should be left unchanged.
+MessageCommentsThis field is for validation purposes and should be left unchanged.
  
 
 

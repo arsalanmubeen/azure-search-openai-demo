@@ -5,8 +5,8 @@
 }
 
 .header {
-    background-color: #222222;
-    color: #f2f2f2;
+    background-color: #234c73;
+    color: #ffffff;
 }
 
 .headerContainer {
@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     margin-right: 40px;
-    color: #f2f2f2;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -38,12 +38,14 @@
     display: flex;
     list-style: none;
     padding-left: 0;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .headerNavPageLink {
-    color: #f2f2f2;
+    color: #ffffff;
     text-decoration: none;
-    opacity: 0.75;
+    opacity: 1;
 
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
     transition-duration: 500ms;
@@ -55,7 +57,7 @@
 }
 
 .headerNavPageLinkActive {
-    color: #f2f2f2;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -74,5 +76,5 @@
 }
 
 .githubLogo {
-    height: 20px;
+    height: 60px;
 }

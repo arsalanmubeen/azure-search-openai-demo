@@ -3,6 +3,8 @@ import requests
 import re
 import urllib.request
 import os
+import re
+import shutil
 
 from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
@@ -18,6 +20,7 @@ from bs4 import BeautifulSoup
 
 output_directory = r'E:\QDS\azure-search-openai-demo'
 output_directory2 = output_directory+r'\text'
+output_directory_W = output_directory+r'\data'
 
 # Regex pattern to match a URL
 HTTP_URL_PATTERN = r'^http[s]*://.+'
@@ -171,10 +174,12 @@ def create_pdf_from_dataframe(df, output_file):
     # Build the PDF document
     pdf_document.build(paragraphs)
 
+def remove_newlines_pdf(text):
+        return text.replace('\n', ' ')     
 
 class WEB_to_PDF():    
     # Create a directory to store the text files
-    
+   
     if not os.path.exists(output_directory2):
         os.mkdir(output_directory2)
     else: 
@@ -182,29 +187,44 @@ class WEB_to_PDF():
     with open(output_directory+r'/qdsnet.txt', 'r') as file:
         urls = file.read().splitlines()
 
+    # Define a regular expression pattern to extract the website name
+    pattern = re.compile(r'https://www\.(\w+)\.com')
+
+    website_groups = {}
+
+    # Group URLs by website names
+    for url in urls:
+        match = re.search(pattern, url)
+        if match:
+            website_name = match.group(1)
+            if website_name not in website_groups:
+                website_groups[website_name] = []
+            website_groups[website_name].append(url.strip())
+
     for index, url in enumerate(urls, start=1):
-        crawl(url)  
+        crawl(url)
+    output_directory_f = output_directory_W+"\\"+website_name
+    if os.path.exists(output_directory_f):
+        shutil.rmtree(output_directory_f)
+    os.makedirs(output_directory_f)
+     
 
     # Create a list to store the text files
     texts=[]
 
     # Get all the text files in the text directory
     for file in os.listdir(output_directory2):
-
-    # Open the file and read the text
-        with open(output_directory2 + r'\\' + file, "r", encoding="UTF-8") as f:
+        with open(os.path.join(output_directory2, file), "r", encoding="UTF-8") as f:
             text = f.read()
-            texts.append((file[11:-4].replace('-',' ').replace('_', ' ').replace('#update',''), text))
-    # Create a dataframe from the list of texts
-    df = pd.DataFrame(texts, columns = ['fname', 'text'])
-    df.drop('fname', axis=1)
-    # Set the text column to be the raw text with the newlines removed
-    df['text'] = df.fname + ". " + remove_newlines(df.text)
+            texts.append((file[11:-4].replace('-', ' ').replace('_', ' ').replace('#update', ''), text))
+            print (file.replace('.txt', ''))
 
-    if os.path.isfile(output_directory+r'\data\website.pdf'):
-        os.remove(output_directory+r'\data\website.pdf')
-        if os.path.isfile(output_directory+r'\data\website.pdf.md5'):
-            os.remove(output_directory+r'\data\website.pdf.md5')
-        create_pdf_from_dataframe(df, output_directory+r'\data\website.pdf')
-    else:
-        create_pdf_from_dataframe(df, output_directory+r'\data\website.pdf')    
+            # Create a dataframe from the list of texts
+            df = pd.DataFrame(texts, columns=['fname', 'text'])
+            df.drop('fname', axis=1, inplace=True)
+            df['text'] = df['text'].apply(remove_newlines_pdf)
+            # Create separate PDFs for each URL in the dataframe
+            out = output_directory_f+"\\"+file.replace('.txt', '.pdf')
+            create_pdf_from_dataframe(df,out)
+            texts.clear() 
+          

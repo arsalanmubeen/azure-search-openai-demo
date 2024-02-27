@@ -71,11 +71,22 @@ export const Answer = ({
                         <span className={styles.citationLearnMore}>Citations:</span>
                         {parsedAnswer.citations.map((x, i) => {
                             const path = getCitationFilePath(x);
-                            return (
-                                <a key={i} className={styles.citation} title={x} onClick={() => onCitationClicked(path)}>
-                                    {`${++i}. ${x}`}
-                                </a>
-                            );
+                            let onClickHandler = null;
+                            if (path.includes("www")) {
+                                //onClickHandler = () => window.open(path, "_blank");
+                                return (
+                                    <a key={i} className={styles.citation} href={path} target="_blank">
+                                        {`${++i}. ${path}`}
+                                    </a>
+                                );
+                            } else {
+                                onClickHandler = () => onCitationClicked(path);
+                                return (
+                                    <a key={i} className={styles.citation} title={path} onClick={onClickHandler}>
+                                        {`${++i}. ${x}`}
+                                    </a>
+                                );
+                            }
                         })}
                     </Stack>
                 </Stack.Item>

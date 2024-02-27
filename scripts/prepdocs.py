@@ -251,6 +251,7 @@ async def main(strategy: Strategy, credential: AsyncTokenCredential, args: Any):
 
 
 if __name__ == "__main__":
+    
     #WEB_to_PDF()
     parser = argparse.ArgumentParser(
         description="Prepare documents by extracting content from PDFs, splitting content into sections, uploading to blob storage, and indexing in a search index.",
